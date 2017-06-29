@@ -1,6 +1,6 @@
-# panel
+# vue + vue-router + vuex 的一个后台管理模板
 
-> A Vue.js project
+1. webpack vue vue-router vuex
 
 ## 开始
 
@@ -21,4 +21,61 @@ npm run dev
 
 ```
 npm run build
+```
+
+## 目录结构
+
+```
+src/
+
+├── App.vue
+├── assets
+│   ├── less
+│   │   ├── common.less
+│   │   ├── frame.less
+│   │   ├── index.less
+│   │   └── lib
+│   └── menu.png
+├── common
+│   ├── ajax
+│   │   └── index.js
+│   ├── api
+│   │   ├── index.js
+│   │   └── readme.md
+│   ├── index.js
+│   ├── menu
+│   │   ├── data-center.js
+│   │   ├── index.js
+│   │   └── user-center.js
+│   ├── mixin
+│   │   └── index.js
+│   └── urlMap
+│       └── index.js
+├── components
+│   ├── frame
+│   │   ├── frame.vue
+│   │   ├── header.vue
+│   │   └── side-menu.vue
+│   └── readme.md
+├── main.js
+├── pages
+│   ├── 404.vue
+│   ├── login
+│   │   └── index.vue
+│   ├── test
+│   │   └── index.vue
+│   └── user-center
+│       └── index.vue
+├── router
+│   ├── index.js
+│   ├── map.js
+│   └── menu-router.js
+└── store
+    ├── constants
+    │   └── mutation-types.js
+    ├── index.js
+    ├── modules
+    │   ├── appState
+    │   └── index.js
+    └── readme.md
 ```
