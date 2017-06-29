@@ -1,0 +1,22 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true
+    },
+    "extends": "standard",
+    "plugins": [
+        "html",
+        "standard",
+        "promise"
+    ],
+    "rules": {
+        "semi": ["error", "always"],
+        "indent": ["error", 4],
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "space-before-function-paren": ["error", "never"]
+    }
+}

@@ -1,0 +1,116 @@
+@headerHeight: 60px;
+@headerBgColor: #3d3f43;
+@headerColor: #fff;
+@activeColor: #20a0ff;
+@menuWidth: 200px;
+.header {
+    height: @headerHeight;
+    background-color: @headerBgColor;
+    color: @headerColor;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .logo {
+        width: 340px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        img {
+            margin-top: 1px;
+            height: 120px;
+            margin-right: 3px;
+        }
+        span {
+            font-size: 20px;
+        }
+
+        .btn-munu {
+            width: 25px;
+            height: 52px;
+            margin-left: 35px;
+            top: -15px;
+            opacity: 0.8;
+            background: url('../../assets/menu.png');
+            transition: all .2s linear;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    .header-nav {
+        flex: 1;
+        align-items: center;
+        display: flex;
+        box-sizing: border-box;
+        background-color: @headerBgColor;
+        a {
+            color: #888;
+            padding: 14px 8px;
+            &:hover {
+                color: @activeColor
+            }
+        }
+
+        .active a {
+            color: @activeColor;
+        }
+    }
+    .system-nav {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        padding-left: 10px;
+        list-style: none;
+        a {
+            color: @headerColor;
+            padding: 0 5px;
+            font-size: 12px;
+        }
+    }
+}
+
+.side-menu {
+    position: fixed;
+    top: @headerHeight;
+    left: 0;
+    bottom: 0;
+    width: @menuWidth;
+    z-index: 1000;
+    transition: all .2s linear;
+    background-color: #3d3f43;
+    overflow-y: auto;
+}
+
+.frame-main {
+    min-height: 100%;
+    margin: 0 auto;
+    margin-left: @menuWidth;
+    transition: all .2s linear;
+    .header-placehodler {
+        height: @headerHeight;
+    }
+    &-content {
+    }
+}
+
+.frame-full {
+    .frame-main {
+        margin-left: @menuWidth - @menuWidth;
+    }
+    .side-menu {
+        left: -@menuWidth;
+    }
+}
